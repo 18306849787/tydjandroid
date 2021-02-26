@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout_load_more"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:visibility="visible"
+    android:background="@color/white_bg"
+    android:minHeight="50dp">
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/item_load_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:text="正在加载..."
+        android:textColor="#4d4d4d"
+        android:textSize="14dp"/>
+
+    <ProgressBar
+        android:id="@+id/item_load_pb"
+        style="@android:style/Widget.Holo.ProgressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="125dp"
+        android:visibility="visible"/>
+</RelativeLayout>-->
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout_load_more"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:minHeight="40dp"
+    android:paddingBottom="8dp"
+    android:visibility="visible"
+    android:background="@null">
+
+   <!-- <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>-->
+
+    <TextView
+        android:id="@+id/item_load_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="正在加载..."
+        android:textColor="#4d4d4d"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/item_load_pb"
+        style="@android:style/Widget.Holo.ProgressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/item_load_tv"
+        android:layout_marginEnd="5dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/item_load_tv"
+        app:layout_constraintEnd_toStartOf="@+id/item_load_tv"
+        app:layout_constraintTop_toTopOf="@+id/item_load_tv" />
+</android.support.constraint.ConstraintLayout>

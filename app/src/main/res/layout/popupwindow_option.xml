@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="116dp"
+    android:layout_height="166dp"
+    android:background="@mipmap/new_two_option_bg">
+
+    <TextView
+        android:id="@+id/textView_pws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@mipmap/new_two_pws"
+        android:drawablePadding="6dp"
+        android:text="拍微视"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView_ldt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="17dp"
+        android:drawableLeft="@mipmap/new_two_ldt"
+        android:drawablePadding="6dp"
+        android:text="朗读厅"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pws"></TextView>
+
+    <TextView
+        android:id="@+id/textView_zsjd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="17dp"
+        android:drawableLeft="@mipmap/new_two_zsjd"
+        android:drawablePadding="6dp"
+        android:text="知识竞答"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ldt"></TextView>
+
+    <TextView
+        android:id="@+id/textView_zscg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="17dp"
+        android:drawableLeft="@mipmap/new_two_zscg"
+        android:drawablePadding="6dp"
+        android:text="知识闯关"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_zsjd"></TextView>
+
+</android.support.constraint.ConstraintLayout>

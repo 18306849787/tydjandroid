@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--启动页  启动视频 跳过 的字体大小-->
+    <dimen name="text_size_skip">15sp</dimen>
+
+    <!--HomeActivity 页面-->
+    <dimen name="text_size_buttom">10sp</dimen>          <!--HomeActivity 底部字体大小-->
+    <dimen name="text_size_tab_not_chose">15</dimen>        <!--HomeActivity 首页的 tab未选中 的字体大小-->
+    <dimen name="text_size_tab_chose">17</dimen>            <!--HomeActivity 首页的 tab被选中 的字体大小-->
+    <dimen name="padding_bottom">40dp</dimen>
+
+    <!--基层党建-->
+    <dimen name="basic_party1">16sp</dimen>    <!--基层党建 ，新闻标题 字体-->
+    <dimen name="basic_party2">11sp</dimen>    <!--基层党建 ，新闻浏览量和发布时间 字体-->
+
+    <!--<dimen name="basic_party3">15sp</dimen>    &lt;!&ndash;基层党建 ,更多页面 标题栏 字体&ndash;&gt;-->
+
+    <!--新闻详情 页面-->
+    <dimen name="news_citation">16sp</dimen>      <!--引标题 字号-->
+    <dimen name="news_headline">22sp</dimen>      <!--标题 字号-->
+    <dimen name="news_subhead">15sp</dimen>        <!--副标题 字号-->
+    <dimen name="news_browstimes">13sp</dimen>      <!--浏览量 字号-->
+
+    <!--基层党建 地址选择 弹窗-->
+    <dimen name="text1">15sp</dimen>    <!--小店区-->
+    <dimen name="text2">15sp</dimen>    <!--迎泽区-->
+    <dimen name="text3">14sp</dimen>    <!--杏花岭区-->
+    <dimen name="text4">14sp</dimen>    <!--尖草坪区-->
+
+    <dimen name="text5">14sp</dimen>    <!--万柏林区-->
+    <dimen name="text6">15sp</dimen>    <!--晋源区-->
+    <dimen name="text7">15sp</dimen>    <!--古交区-->
+    <dimen name="text8">15sp</dimen>    <!--清徐区-->
+
+    <dimen name="text9">15sp</dimen>    <!--阳曲县-->
+    <dimen name="text10">15sp</dimen>    <!--娄烦县-->
+    <dimen name="text11">15sp</dimen>    <!--综改区-->
+    <dimen name="text12">13sp</dimen>    <!--不锈钢园区-->
+
+    <dimen name="text13">14sp</dimen>    <!--机关公委-->
+    <dimen name="text14">15sp</dimen>    <!--经信委-->
+    <dimen name="text15">15sp</dimen>    <!--住建委-->
+    <dimen name="text16">15sp</dimen>    <!--教育局-->
+
+    <dimen name="text17">13sp</dimen>    <!--卫生计生委-->
+    <dimen name="text18">15sp</dimen>    <!--公安局-->
+    <dimen name="text19">15sp</dimen>    <!--国资委-->
+    <dimen name="text20">14sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>    <!--城乡管委-->
+
+    <!--全名朗读-->
+    <dimen name="text_margin">16dp</dimen>
+
+</resources>

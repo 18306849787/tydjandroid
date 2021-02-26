@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/sevice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:paddingBottom="11dp"
+        android:text="服务"
+        android:textColor="#ff333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBg"
+        app:layout_constraintTop_toBottomOf="@+id/sevice_tv" />
+
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/service_com_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/sevice_tv"
+        app:tl_indicator_color="#D62404"
+        app:tl_indicator_height="3dp"
+        app:tl_indicator_width="41dp"
+        app:tl_textsize="14sp"
+        app:tl_underline_gravity="BOTTOM"
+        app:tl_underline_height="0.5dp"
+        app:tl_underline_color="@color/colorBg"
+        app:tl_textSelectColor="#D62404"
+        app:tl_textUnselectColor="@color/c_333333">
+
+    </com.flyco.tablayout.SlidingTabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/service_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service_com_tab" />
+</android.support.constraint.ConstraintLayout>

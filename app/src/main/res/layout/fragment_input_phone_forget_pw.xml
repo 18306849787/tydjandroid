@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.loginregister.InputPhoneFragment">
+
+    <TextView
+        android:id="@+id/textView_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="新用户注册"
+        android:textColor="#ff333333"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:text="手机号码"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_headline" />
+
+    <EditText
+        android:id="@+id/edit_phone_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/et_underline_color"
+        android:hint="输入你的手机号码"
+        android:maxLength="11"
+        android:inputType="phone"
+        android:textColor="#ff333333"
+        android:textColorHint="#ffaaaaaa"
+        android:textCursorDrawable="@drawable/et_cursor_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_phone" />
+
+    <ImageView
+        android:id="@+id/imageView_clear"
+        android:visibility="visible"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:src="@mipmap/zhuce_btn_clear"
+        app:layout_constraintBottom_toBottomOf="@id/edit_phone_num"
+        app:layout_constraintEnd_toEndOf="@id/edit_phone_num"
+        app:layout_constraintTop_toTopOf="@id/edit_phone_num" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_phone_num">
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_register_ac_button_bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="下一步"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+        <ImageView
+            android:id="@+id/imageView_select_box"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ac_register_selector1"/>
+
+        <TextView
+            android:id="@+id/textView_select_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="同意《太原党建注册协议》"
+            android:textColor="#ff333333"
+            android:textSize="12sp"/>
+
+
+    </LinearLayout>-->
+
+
+
+</android.support.constraint.ConstraintLayout>

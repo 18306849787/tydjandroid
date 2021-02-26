@@ -1,0 +1,237 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.jakewharton.butterknife'
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.typartybuilding"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "APP_ID",
+                GETUI_APP_KEY   : "APP_KEY",
+                GETUI_APP_SECRET: "APP_SECRET"
+        ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64", "arm64-v8a", "x86"
+        }
+
+        manifestPlaceholders = [
+                //个推 的appid， appkey， appsecret
+                GETUI_APP_ID    : "O0ixF4No5d9ZDViCtV8RF8",
+                GETUI_APP_KEY   : "ckr4dA0I8O6fsV0yB1boDA",
+                GETUI_APP_SECRET: "AZ8gMqOpJg88oDVe55TryA"
+
+        ]
+
+        /*   manifestPlaceholders = [
+                JSHARE_PKGNAME : applicationId,
+                JPUSH_APPKEY : "f372131ae2892297261f08f1", //极光控制台创建应用得到的AppKey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                //TENCENT_APPID: "QQ开发者应用的appID",//腾讯开放平台注册应用得到的appId
+                //FACEBOOK_APPID: "facebook开发者应用的appID",//facebook注册应用得到的appId
+        ]*/
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //人脸识别，在调试时 也能使用
+    signingConfigs {
+        debug {
+            storeFile file(STORE_FILE) //签名文件路径
+            storePassword STORE_PASS
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASS //签名密码
+        }
+        release {
+            storeFile file(STORE_FILE) //签名文件路径
+            storePassword STORE_PASS
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASS //签名密码
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //以下是为了找到android.os.SystemProperties这个隐藏的类
+    //这个类最高支持的API是25，25之后就引用不了这个类了
+    String SDK_DIR = System.getenv("ANDROID_SDK_HOME")
+    //("TAG", "SDK_DIR = " + SDK_DIR );
+    if (SDK_DIR == null) {
+        Properties props = new Properties()
+        props.load(new FileInputStream(project.rootProject.file("local.properties")))
+        SDK_DIR = props.get('sdk.dir')
+    }
+    dependencies {
+        compileOnly files("${SDK_DIR}/platforms/android-21/data/layoutlib.jar")
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations {
+        all*.exclude group: 'com.google.code.gson'
+        all*.exclude group: 'com.squareup.okhttp3'
+        all*.exclude group: 'com.squareup.okio'
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
+
+}
+
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.jakewharton:butterknife:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    implementation 'com.alibaba:fastjson:1.1.54.android'
+    //修改状态栏颜色和状态栏字体颜色的外部包
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+
+    implementation 'com.android.support:design:28.0.0'
+    //滚动选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    //点击图片可放大
+    implementation 'com.bm.photoview:library:1.4.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    //压缩图片
+    implementation 'id.zelory:compressor:2.1.0'
+    //rxjava + retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.3.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.3.0"
+
+    implementation "io.reactivex.rxjava2:rxjava:2.0.6"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    implementation "com.squareup.okhttp3:logging-interceptor:3.9.0"
+    implementation 'com.squareup.okhttp3:okhttp:3.1.2'
+    //圆形imageview
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    //PictureSelector
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    //下载文件
+    //implementation 'com.github.zhongjhATC:Retrofit2Rxjava2Download:1.0.0'
+    //implementation 'com.github.Chenayi:RetrofitRxDownload:1.0.2'
+    implementation 'com.liulishuo.filedownloader:library:1.7.4'
+    //Glide4.4
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //exoplayer 播放器
+    implementation 'com.google.android.exoplayer:exoplayer:r2.5.2'
+    implementation 'com.devbrackets.android:exomedia:4.3.0'
+    //implementation 'com.google.android.exoplayer:exoplayer:r2.5.2'
+
+    //SmartRefreshLayout
+    /*implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-andx-14'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-andx-14'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'*/
+
+    /*implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'*/
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-19'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-19'
+
+    //implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //implementation project(':library')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':android-ffmpeg')
+    implementation project(':faceplatform')
+    //implementation project(':faceplatform-ui')
+    //implementation project(':facesdk')
+    //个推依赖
+    implementation 'com.getui:sdk:2.13.2.0'
+    //极光分享 相关依赖
+    /* implementation 'cn.jiguang.sdk:jshare:1.6.0'
+     implementation 'cn.jiguang.sdk:jshare-qqmodel:1.6.0'
+     implementation 'cn.jiguang.sdk:jshare-wechatmodel:1.6.0'
+     implementation 'cn.jiguang.sdk:jshare-sinamodel:1.6.0'
+     implementation 'cn.jiguang.sdk:jshare-facebookmodel:1.7.0'
+     implementation 'cn.jiguang.sdk:jshare-twittermodel:1.7.0'
+     implementation 'cn.jiguang.sdk:jshare-jchatpromodel:1.6.0'
+     implementation 'cn.jiguang.sdk:jcore:2.0.1'
+    */
+
+    implementation('com.github.CarGuo:GSYRecordWave:2.0.1') {
+        exclude group: "com.android.support"
+    }
+
+    implementation('com.coder:media:1.0.2') {
+        exclude group: "com.android.support"
+    }
+    implementation('pl.droidsonroids.gif:android-gif-drawable:1.2.1') {
+        exclude group: "com.android.support"
+    }
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.1.3'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.1.3'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation('com.github.adrielcafe:AndroidAudioConverter:0.0.8'){
+        exclude group: "com.android.support"
+    }
+
+    //TabLayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //dapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    //SuperTextView
+    implementation 'com.github.lygttpod:SuperTextView:2.4.2'
+    //utilcodex
+//    implementation 'com.blankj:utilcodex:1.29.0'
+    //沉浸式状态栏
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    //arouter
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    //lottie
+//    implementation 'com.airbnb.android:lottie:3.4.1'
+
+    //permissions 管理
+    implementation 'com.hjq:xxpermissions:8.6'
+
+    //banner
+    implementation 'com.youth.banner:banner:1.4.10'
+    //androidx.lifecycle:lifecycle-livedata:2.0.0
+
+//    implementation 'com.devbrackets.android:exomedia:4.3.0'
+}

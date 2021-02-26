@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.HomeActivity">
+
+   <!-- <fragment
+        android:id="@+id/fragment_title"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:name="com.TyPartyBuilding.fragment.FragmentTitle"></fragment>-->
+    <!--用于动态加载fragment-->
+
+    <!--<FrameLayout
+        android:visibility="gone"
+        android:id="@+id/framelayout_title"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+    </FrameLayout>-->
+
+    <com.typartybuilding.view.NoSlideViewPager
+        android:visibility="gone"
+        android:id="@+id/viewpager_home_ac"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></com.typartybuilding.view.NoSlideViewPager>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_bottom">
+
+       <!-- <ImageView
+            android:id="@+id/imageView_plus"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/selector_tab_plus"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.475"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <TextView
+            android:id="@+id/textView_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:drawableTop="@drawable/selector_tab_home"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/text_home"
+            android:textColor="@color/home_ac_selector"
+            android:textSize="@dimen/text_size_buttom" />
+        <TextView
+            android:id="@+id/textView_zgzj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:drawableTop="@drawable/selector_tab_zgzj"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/text_zgzj"
+            android:textColor="@color/home_ac_selector"
+            android:textSize="@dimen/text_size_buttom" />
+        <TextView
+            android:id="@+id/textView_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:drawableTop="@drawable/selector_tab_my"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:text="@string/text_my"
+            android:textColor="@color/home_ac_selector"
+            android:textSize="@dimen/text_size_buttom" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

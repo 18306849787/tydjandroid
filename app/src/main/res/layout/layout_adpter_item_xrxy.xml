@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_xrxy_white_radius_2">
+
+    <ImageView
+        android:id="@+id/xrxy_fra_img"
+        android:layout_width="132dp"
+        android:layout_height="74dp"
+        android:layout_margin="16dp"
+        android:src="@mipmap/ic_load_img"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/xrxy_fra_times"
+        android:layout_width="34dp"
+        android:layout_height="18dp"
+        android:layout_margin="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/xrxy_fra_img"
+        app:layout_constraintRight_toRightOf="@+id/xrxy_fra_img"
+        app:sCenterTextColor="@color/white"
+        app:sCenterTextSize="8sp"
+        app:sShapeCornersRadius="10dp"
+        app:sShapeSelectorNormalColor="#80000000"
+        app:sShapeSelectorPressedColor="#80000000"
+        app:sUseShape="true" />
+
+    <TextView
+        android:id="@+id/xrxy_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="习近平新时代中国特色社 会主义思想的内在逻辑习近平新时代中国特色社 会主义思想的内在逻辑"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/xrxy_fra_img"
+        app:layout_constraintTop_toTopOf="@+id/xrxy_fra_img"
+        tools:text="习近平新时代中国特色社 会主义思想的内在逻辑" />
+
+    <TextView
+        android:id="@+id/xrxy_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="6.3w次播放"
+        android:textColor="#ff999999"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/xrxy_fra_img"
+        app:layout_constraintStart_toEndOf="@+id/xrxy_fra_img" />
+
+    <TextView
+        android:id="@+id/xrxy_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="2020.8.20"
+        android:textColor="#ff999999"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/xrxy_fra_img"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

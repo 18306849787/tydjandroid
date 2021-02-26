@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_F7F7F7"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_me_top_pic"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mine_head_cl"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_common_white_frame"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.allen.library.CircleImageView
+            android:id="@+id/me_head_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/me_head_img_lv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_lv1_3"
+            app:layout_constraintEnd_toEndOf="@+id/me_head_img"
+            app:layout_constraintStart_toStartOf="@+id/me_head_img"
+            app:layout_constraintBottom_toBottomOf="@+id/me_head_img"
+            app:layout_constraintTop_toTopOf="@+id/me_head_img"/>
+        <TextView
+            android:id="@+id/me_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="test"
+            android:textColor="#ff333333"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/me_head_img"
+            app:layout_constraintStart_toEndOf="@+id/me_head_img"
+            app:layout_constraintTop_toTopOf="@+id/me_head_img" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/me_level"
+            android:layout_width="40dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/me_head_img"
+            app:layout_constraintStart_toEndOf="@+id/me_name"
+            app:layout_constraintTop_toTopOf="@+id/me_head_img"
+            app:sCenterTextColor="@color/c_333333"
+            app:sCenterTextSize="10sp"
+            app:sCenterTextString="LV1"
+            app:sShapeCornersRadius="10dp"
+            app:sShapeStrokeColor="@color/c_EEEEEE"
+            app:sShapeStrokeWidth="1dp"
+            app:sUseShape="true" />
+
+        <TextView
+            android:id="@+id/me_fragment_shuoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="test"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/me_head_img"
+            app:layout_constraintTop_toBottomOf="@+id/me_head_img" />
+
+        <ImageView
+            android:id="@+id/me_fragment_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/me_yrz"
+            app:layout_constraintBottom_toBottomOf="@+id/me_head_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/me_head_img" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mine_head_cl">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical"
+            >
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_common_white_frame"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+
+                <ImageView
+                    android:id="@+id/mine_fragment_point_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/me_jfqd"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mine_fragment_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21212"
+                    android:textColor="@color/c_EA0400"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的积分 : "
+                    android:textColor="@color/c_999999"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toStartOf="@+id/mine_fragment_point"
+                    app:layout_constraintTop_toTopOf="@+id/mine_fragment_point" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/mine_fragment_collection"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:sDividerLineHeight="2dp"
+                app:sDividerLineType="bottom"
+                app:sLeftIconRes="@mipmap/me_wdsc"
+                app:sLeftTextColor="@color/c_333333"
+                app:sLeftTextSize="14sp"
+                app:sLeftTextString="我的收藏"
+                app:sLeftViewMarginLeft="20dp"
+                app:sRightIconRes="@mipmap/ic_more" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/mine_fragment_follow"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineHeight="2dp"
+                app:sDividerLineType="bottom"
+                app:sLeftIconRes="@mipmap/me_wdgz"
+                app:sLeftTextColor="@color/c_333333"
+                app:sLeftTextSize="14sp"
+                app:sLeftTextString="我的关注"
+                app:sLeftViewMarginLeft="20dp"
+                app:sRightIconRes="@mipmap/ic_more" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/mine_fragment_footprint"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineHeight="2dp"
+                app:sDividerLineType="bottom"
+                app:sLeftIconRes="@mipmap/me_wdzj"
+                app:sLeftTextColor="@color/c_333333"
+                app:sLeftTextSize="14sp"
+                app:sLeftTextString="我的足迹"
+                app:sLeftViewMarginLeft="20dp"
+                app:sRightIconRes="@mipmap/ic_more" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/mine_fragment_weishi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineHeight="2dp"
+                app:sDividerLineType="bottom"
+                app:sLeftIconRes="@mipmap/me_wdws"
+                app:sLeftTextColor="@color/c_333333"
+                app:sLeftTextSize="14sp"
+                app:sLeftTextString="我的微视"
+                app:sLeftViewMarginLeft="20dp"
+                app:sRightIconRes="@mipmap/ic_more" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/mine_fragment_wish"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineHeight="2dp"
+                app:sDividerLineType="bottom"
+                app:sLeftIconRes="@mipmap/me_xyrl"
+                app:sLeftTextColor="@color/c_333333"
+                app:sLeftTextSize="14sp"
+                app:sLeftTextString="心愿认领"
+                app:sLeftViewMarginLeft="20dp"
+                app:sRightIconRes="@mipmap/ic_more" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/mine_fragment_Integral_rule"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineHeight="2dp"
+                app:sDividerLineType="bottom"
+                app:sLeftIconRes="@mipmap/me_jfgz"
+                app:sLeftTextColor="@color/c_333333"
+                app:sLeftTextSize="14sp"
+                app:sLeftTextString="积分规则"
+                app:sLeftViewMarginLeft="20dp"
+                app:sRightIconRes="@mipmap/ic_more" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/mine_fragment_set"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sDividerLineHeight="2dp"
+                app:sDividerLineType="bottom"
+                app:sLeftIconRes="@mipmap/ic_me_xtsz"
+                app:sLeftTextColor="@color/c_333333"
+                app:sLeftTextSize="14sp"
+                app:sLeftTextString="系统设置"
+                app:sLeftViewMarginLeft="20dp"
+                app:sRightIconRes="@mipmap/ic_more" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

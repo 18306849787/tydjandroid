@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.loginRelatedActivity.FaceSwipingActivity">
+
+    <!--<fragment
+        android:id="@+id/fragment_title_ac"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:name="com.typartybuilding.fragment.FragmentTitleForAc"/>-->
+    <com.typartybuilding.view.RedTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+    </com.typartybuilding.view.RedTitleLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_gravity="center_horizontal"
+        android:text="请将头部移入圆框内"
+        android:textColor="#ff333333"
+        android:textSize="15sp"/>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="266dp"
+        android:layout_height="269dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="33dp"/>
+        <!--android:background="@mipmap/face_circle"/>-->
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp">
+
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/framelayout_face_swiping"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="53dp"
+            android:background="@drawable/ac_face_swiping_selector1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_face_swiping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="9dp"
+                android:drawableLeft="@drawable/ac_face_swiping_selector2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="认证失败，点击重新识别"
+                android:textColor="#ffffffff"
+                android:textSize="15sp" />
+
+        </FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

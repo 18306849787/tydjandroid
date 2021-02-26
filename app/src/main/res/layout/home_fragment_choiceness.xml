@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragmentChoiceness">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollview_home_fg_ch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <fragment
+                    android:id="@+id/fragment_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.typartybuilding.fragment.fgChoiceness.FragmentPicture"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/parting_line_cho"></View>
+                <fragment
+                    android:id="@+id/fragment_hot_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.typartybuilding.fragment.fgChoiceness.FragmentHotVideo"/>
+                <fragment
+                    android:id="@+id/fragment_mic_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.typartybuilding.fragment.fgChoiceness.FragmentMicVideo"/>
+                <fragment
+                    android:id="@+id/fragment_current_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.typartybuilding.fragment.fgChoiceness.FragmentCurrentNews"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        style="@android:style/Widget.Holo.ProgressBar"/>
+
+
+</FrameLayout>

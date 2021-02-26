@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.loginregister.InputCodeFragment">
+
+    <TextView
+        android:id="@+id/textView_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="请输入验证码"
+        android:textColor="#ff333333"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_code_sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
+        android:text="验证码已发送至手机："
+        android:textColor="#ff333333"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_headline" />
+
+    <TextView
+        android:id="@+id/textView_phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:text=""
+        android:textColor="#138DE8"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_code_sent"
+        app:layout_constraintStart_toEndOf="@id/textView_code_sent"
+        app:layout_constraintTop_toTopOf="@id/textView_code_sent" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout_phone_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="78dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_code_sent">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@drawable/et_underline_color"
+            android:textCursorDrawable="@drawable/et_cursor_color"
+            android:inputType="number"
+
+            android:textColor="#ff333333"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@id/editText2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="50dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_underline_color"
+            android:inputType="number"
+
+            android:textColor="#ff333333"
+            android:textCursorDrawable="@drawable/et_cursor_color"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/editText1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/editText3"/>
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textCursorDrawable="@drawable/et_cursor_color"
+            android:background="@drawable/et_underline_color"
+            android:inputType="number"
+
+            android:textColor="#ff333333"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/editText2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/editText4"/>
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textCursorDrawable="@drawable/et_cursor_color"
+            android:background="@drawable/et_underline_color"
+            android:inputType="number"
+            android:textColor="#ff333333"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editText3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_phone_code" >
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_register_ac_button_bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="下一步"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

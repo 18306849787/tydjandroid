@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#32000000">
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_background">
+        <ProgressBar
+            android:id="@+id/big_sec"
+            android:layout_marginTop="16dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            style="@android:style/Widget.Holo.ProgressBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在合成.."
+            android:id="@+id/small_time_text"
+            android:textColor="#AAAAAA"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

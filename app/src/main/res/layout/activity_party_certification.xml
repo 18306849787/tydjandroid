@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_bg"
+    tools:context=".activity.loginRelatedActivity.PartyCertificationActivity">
+    
+    <com.typartybuilding.view.WhiteTitle2Layout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+    </com.typartybuilding.view.WhiteTitle2Layout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="20dp"
+        android:text="党员认证"
+        android:textColor="#ff333333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginLeft="20dp"
+        android:text="请输入身份证号码"
+        android:textColor="#ff333333"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/edit_id_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="23dp"
+        android:textCursorDrawable="@drawable/et_cursor_color"
+        android:background="@drawable/et_underline_color"
+        android:maxLength="18"
+        android:hint="输入你的身份证号"
+        android:inputType="text"
+        android:textColor="#ff333333"
+        android:textColorHint="#ffaaaaaa"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button_certification"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_register_ac_button_bg"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="验证"
+        android:textColor="#ffffffff"
+        android:textSize="18sp" />
+
+</LinearLayout>

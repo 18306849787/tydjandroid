@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/commont_title_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/bg_common_white_frame"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/sys_msg_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/home_mail_ld"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sys_msg_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获得积分"
+        android:textColor="#ffd62404"
+        android:textSize="14sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sys_msg_img"
+        app:layout_constraintTop_toTopOf="@+id/sys_msg_img"
+        app:layout_constraintStart_toEndOf="@+id/sys_msg_img"
+        />
+
+    <TextView
+        android:id="@+id/sys_msg_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="每日登录积分 +5"
+        android:textColor="#ff303133"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sys_msg_img" />
+
+    <TextView
+        android:id="@+id/sys_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08/04"
+        android:textColor="#ff909399"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

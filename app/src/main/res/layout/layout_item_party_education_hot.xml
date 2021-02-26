@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/education_hot_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:drawableLeft="@drawable/line_home_jingxuan"
+        android:drawablePadding="8dp"
+        android:text="推荐热播 "
+        android:textColor="#ff333333"
+        android:textSize="20sp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/sourcehansanscn_heavy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.typartybuilding.view.RoundImageViewNew
+        android:id="@+id/education_hot_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_load_img"
+        app:border_radius="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/education_hot_item_title"
+        />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/education_hot_item_time"
+        android:layout_width="42dp"
+        android:layout_height="20dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/education_hot_item_img"
+        app:layout_constraintRight_toRightOf="@+id/education_hot_item_img"
+        app:sCenterTextColor="@color/white"
+        app:sCenterTextSize="10sp"
+        app:sShapeCornersRadius="10dp"
+        app:sShapeSelectorNormalColor="#80000000"
+        app:sShapeSelectorPressedColor="#80000000"
+        app:sUseShape="true" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_party_edcation_item_img_bg2"
+        app:layout_constraintBottom_toBottomOf="@+id/education_hot_item_img"
+        app:layout_constraintEnd_toEndOf="@+id/education_hot_item_img"
+        app:layout_constraintStart_toStartOf="@+id/education_hot_item_img"
+        app:layout_constraintTop_toTopOf="@+id/education_hot_item_img" />
+
+    <TextView
+        android:id="@+id/education_hot_item_f_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:text="2020年中国国庆大阅兵精华"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/education_hot_item_img"
+        app:layout_constraintStart_toStartOf="@+id/education_hot_item_img"
+        app:layout_constraintTop_toTopOf="@+id/education_hot_item_img" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_play"
+        app:layout_constraintBottom_toBottomOf="@+id/education_hot_item_img"
+        app:layout_constraintEnd_toEndOf="@+id/education_hot_item_img"
+        app:layout_constraintStart_toStartOf="@+id/education_hot_item_img"
+        app:layout_constraintTop_toTopOf="@+id/education_hot_item_img" />
+</android.support.constraint.ConstraintLayout>

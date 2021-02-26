@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_edit"
+                android:layout_width="270dp"
+                android:layout_height="79dp"
+                android:background="@mipmap/ac_login_shurukuang_bg"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_phone_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_phonenum"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:paddingLeft="8dp"
+                    android:textColor="#ffaaaaaa"
+                    android:textCursorDrawable="@drawable/et_cursor_color"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="8dp"
+                    android:textColor="#ffaaaaaa"
+                    android:textCursorDrawable="@drawable/et_cursor_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_forget_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayout_edit"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="0dp"
+                android:text="@string/forget_password"
+                android:textColor="#ffaaaaaa"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="270dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:background="@mipmap/ac_login_red_bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/button_login"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_visitor_longin"
+            android:layout_width="270dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/ac_login_orange_bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/button_visitor_longin"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="270dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/ac_login_register_bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/button_register"
+            android:textColor="#fffd3d3e"
+            android:textSize="18sp"
+            android:visibility="visible" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

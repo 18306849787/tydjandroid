@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">太原党建</string>
+
+    <!--开发用 ip http://47.97.126.122:8080/ -->
+    <string name="base_url">http://39.100.55.119:8080/</string>
+
+    <!--用户协议url  http://47.97.126.122/web/page/html/GVRP.html-->
+    <string name="user_agreement_url">http://39.100.55.119:39000/web/page/html/GVRP.html</string>
+
+    <!--远程教育页面，山西好干部网-->
+    <!--<string name="webview_url_hgbw">https://www.sxgbxx.gov.cn/?from=singlemessage&isappinstalled=0</string>-->
+    <!--太原 组工公众号 地址   -->
+    <string name="webview_url_tyzg">https://g.eqxiu.com/s/H7s0n6ts</string>
+    <string name="default_file_name">tyrecord</string>      <!--录音默认文件名-->
+
+    <string name="mic_defaul_title">太原党建微视</string>   <!--分享微视时，没有标题，使用默认标题-->
+
+    <!--LoginActivity-->
+    <string name="hint_phonenum">请输入您的手机号码</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="button_login">登录</string>
+    <string name="button_visitor_longin">访客登录</string>
+    <string name="button_register">新用户注册</string>
+    <string name="button_face_swiping">开始刷脸</string>
+    <string name="button_into_face">录入人脸</string>
+    <string name="account_login">账号登录</string>
+    <string name="face_login">人脸识别登录</string>
+
+    <string name="video_duration">30s</string>
+
+    <!--FaceSwipingActivity-->
+    <string name="face_swiping_sucess">认证成功，即将自动登录...</string>
+    <string name="face_swiping_fail">认证失败，点击重新识别</string>
+
+    <!--HomeActivity-->
+    <string name="text_home">首页</string>
+    <string name="text_my">个人中心</string>
+    <string name="text_zgzj">组工之家</string>
+    <!--首页 各个页面 的标题-->
+    <string name="home_choice">精选</string>
+    <string name="home_learn_time">学习时刻</string>
+    <string name="home_pb_video">党建微视</string>
+    <string name="home_pb_library">党建书屋</string>
+    <string name="home_dream_wish">圆梦心愿</string>
+    <string name="home_ty_organization">太原组工</string>
+    <string name="home_industy_pb">基层党建</string>
+    <string name="home_pb_map">党建地图</string>
+    <!--精选页面-->
+    <string name="fg_cho_str1">热门视频</string>
+    <string name="fg_cho_str2">精彩微视</string>
+    <string name="fg_cho_str3">时事新闻</string>
+    <!--党建微视-->
+    <string name="fg_pbv_str1">党建热搜</string>
+    <string name="fg_pbv_str2">人气榜单</string>
+    <string name="fg_pbv_str3">发现精彩</string>
+    <!--党建图书馆-->
+    <string name="fg_pbl_str1">新思想</string>
+    <string name="fg_pbl_str2">十九大</string>
+    <string name="fg_pbl_str3">学法规</string>
+    <string name="fg_pbl_str4">发展历程</string>
+    <string name="fg_pbl_str5">榜样故事</string>
+    <string name="fg_pbl_str6">精选推荐</string>
+    <string name="fg_pb1_str7">热点</string>
+    <!--圆梦心愿-->
+    <string name="dream_wish_str1">爱心已集齐</string>
+    <string name="dream_wish_str2">感谢参与捐赠的每一个人</string>
+    <string name="dream_wish_str3">助力捐赠</string>
+    <string name="dream_wish_str4">已集齐</string>
+
+    <!--基层党建-->
+    <string name="text1">小店区</string>
+    <string name="text2">迎泽区</string>
+    <string name="text3">杏花岭区</string>
+    <string name="text4">尖草坪区</string>
+
+    <string name="text5">万柏林区</string>
+    <string name="text6">晋源区</string>
+    <string name="text7">古交区</string>
+    <string name="text8">清徐区</string>
+
+    <string name="text9">阳曲县</string>
+    <string name="text10">娄烦县</string>
+    <string name="text11">综改区</string>
+    <string name="text12">不锈钢园区</string>
+
+    <string name="text13">机关公委</string>
+    <string name="text14">经信委</string>
+    <string name="text15">住建委</string>
+    <string name="text16">教育局</string>
+
+    <string name="text17">卫生计生委</string>
+    <string name="text18">公安局</string>
+    <string name="text19">国资委</string>
+    <string name="text20">城乡管委</string>
+
+
+    <!--党建地图-->
+    <string name="pb_map_str1">基层党组织</string>
+    <string name="pb_map_str2">党群服务中心</string>
+    <string name="pb_map_str3">教育基地</string>
+    <string name="pb_map_str4">志愿服务站</string>
+    <string name="default_organization">中共太原市小店区委组织部</string>  <!--党建地图 默认机构-->
+
+    <!--UploadPictureActivity-->
+    <string name="upload_pic_ac_str1">发布</string>
+
+    <!--在发布微视页面，提示点击图片可预览视频-->
+    <string name="preview_video_hint">提示：点击图片可预览视频</string>
+
+    <!--CurrentNewsActivity-->
+    <string name="current_news_ac_str1">时事新闻</string>
+
+    <!--HotVideoActivity-->
+    <string name="hot_video_ac_str1">热门视频</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>    <!--MoreEducationVideoActivity的标题-->
+
+
+    <!--人脸识别-->
+
+    <string name="detect_no_face">未检测到人脸</string>
+    <string name="detect_face_in">把脸移入框内</string>
+    <string name="detect_zoom_in">手机拿近一点</string>
+    <string name="detect_zoom_out">手机拿远一点</string>
+    <string name="detect_head_up">建议略微抬头</string>
+    <string name="detect_head_down">建议略微低头</string>
+    <string name="detect_head_left">建议略微向左转头</string>
+    <string name="detect_head_right">建议略微向右转头</string>
+    <string name="detect_occ_face">脸部有遮挡</string>
+    <string name="detect_low_light">光线再亮些</string>
+    <string name="detect_keep">请保持不动</string>
+    <string name="detect_standard">请正对手机</string>
+    <string name="detect_timeout">检测超时</string>
+    <string name="liveness_eye">眨眨眼</string>
+    <string name="liveness_eye_left">请眨眨左边眼睛</string>
+    <string name="liveness_eye_right">请眨眨右边眼睛</string>
+    <string name="liveness_mouth">张张嘴</string>
+    <string name="liveness_head_left">向左缓慢转头</string>
+    <string name="liveness_head_right">向右缓慢转头</string>
+    <string name="liveness_head_left_right">摇摇头</string>
+    <string name="liveness_head_up">缓慢抬头</string>
+    <string name="liveness_head_down">缓慢低头</string>
+    <string name="liveness_ok">非常好</string>
+    <string name="ok">采集完毕</string>
+
+
+    <!--极光分享-->
+    <!-- 平台名称 -->
+    <string name="jiguang_socialize_text_sina_key">微博</string>
+    <string name="jiguang_socialize_text_sina_msg_key">微博私信</string>
+    <string name="jiguang_socialize_text_qq_key">QQ</string>
+    <string name="jiguang_socialize_text_qq_zone_key">QQ空间</string>
+    <string name="jiguang_socialize_text_weixin_key">微信</string>
+    <string name="jiguang_socialize_text_weixin_circle_key">微信朋友圈</string>
+    <string name="jiguang_socialize_text_weixin_favorite_key">微信收藏</string>
+    <string name="jiguang_socialize_text_facebook_key">Facebook</string>
+    <string name="jiguang_socialize_text_messenger_key">Messenger</string>
+    <string name="jiguang_socialize_text_twitter_key">Twitter</string>
+    <string name="jiguang_socialize_text_jchatpro_key">JChatPro</string>
+    <string name="jiguang_socialize_text_add_custom_platform">请配置用户平台</string>
+    <string name="jiguang_socialize_cancel_btn_str">取消</string>
+    <string name="jiguang_socialize_send_btn_str">发送</string>
+    <string name="jiguang_socialize_share">分享</string>
+    <string name="jiguang_socialize_sina">新浪</string>
+    <string name="jiguang_socialize_text_cp_link">复制链接</string>
+    <string name="title_activity_micro_video_play">MicroVideoPlayActivity</string>
+
+</resources>

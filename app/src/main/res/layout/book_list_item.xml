@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:layout_marginBottom="5dp"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/title_linear"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:id="@+id/book_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_image"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/readTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共产党员学习手册"
+                android:textColor="@color/schm_book_title_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/readAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高开华 | 368字"
+                android:layout_marginTop="11dp"
+                android:textColor="@color/schm_book_writer"
+                android:textSize="12sp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/user" />
+                <TextView
+                    android:id="@+id/readFrequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="4.1万人读过"
+                    android:textColor="@color/schm_book_user"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="26dp"
+            android:id="@+id/btn_read"
+            android:background="@drawable/btn_langdu"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/profile_parent_sanjiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/ic_landu_sanjiao"
+        android:layout_marginLeft="16dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:id="@+id/profile_parent"
+        android:background="#eeeeee">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简介：本书围绕“不忘相关内容分别阐主题教育的相关内容分别阐主题教育的相关内容分别关内容分别阐。"
+            android:textColor="#ff333333"
+            android:textSize="12sp"
+            android:id="@+id/readProfile" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="15dp"
+    android:layout_marginTop="1dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/music_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/music_play"
+            android:background="@drawable/music_use_selector"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="流走的往事"
+            android:textColor="#ff333333"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/music_time"
+            android:layout_marginTop="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03:02"
+            android:textColor="#ffaaaaaa"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+    
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="23dp"
+        android:id="@+id/music_use"
+        android:background="@drawable/btn_xzpy"/>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".activity.loginRelatedActivity.IntoFaceActivity">
+
+    <com.typartybuilding.view.WhiteTitle2Layout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+    </com.typartybuilding.view.WhiteTitle2Layout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView_success1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="38dp"
+            android:text="录入人脸"
+            android:textColor="#ff333333"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/textView_fail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="8dp"
+            android:text="拍摄您本人人脸，请确保正对手机，光线充足"
+            android:textColor="#ff333333"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="266dp"
+            android:layout_height="269dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="33dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_success1" >
+            <!--android:background="@mipmap/face_circle"-->
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView_success2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="27dp"
+            android:text="建议略微低头"
+            android:textColor="#ffff4242"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/framelayout" />
+
+
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/framelayout_fail"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="53dp"
+            android:background="@drawable/ac_face_swiping_shape1_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/framelayout">
+
+            <TextView
+                android:id="@+id/textView_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/faceluru_failed"
+                android:drawablePadding="9dp"
+                android:gravity="center"
+                android:text="录入失败，点击重新录入"
+                android:textColor="#ffffffff"
+                android:textSize="15sp" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:visibility="invisible"
+            android:id="@+id/framelayout_succes"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="53dp"
+            android:background="@drawable/ac_face_swiping_shape1_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_success2">
+
+            <TextView
+                android:id="@+id/textView_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/face_gou"
+                android:drawablePadding="9dp"
+                android:gravity="center"
+                android:text="录入成功，即将自动跳转..."
+                android:textColor="#ffffffff"
+                android:textSize="15sp" />
+
+        </FrameLayout>
+
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

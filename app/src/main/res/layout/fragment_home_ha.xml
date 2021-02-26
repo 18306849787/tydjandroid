@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/new_two_bg_01">
+
+        <View
+            android:id="@+id/viewStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="#00000000"
+            app:layout_constraintTop_toTopOf="parent"></View>
+
+        <ImageView
+            android:id="@+id/imageView_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/new_two_search"
+            app:layout_constraintBottom_toBottomOf="@+id/tablayout_fragment_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tablayout_fragment_home">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/imageView_option"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="14dp"
+            android:src="@mipmap/new_two_option"
+            app:layout_constraintBottom_toBottomOf="@+id/tablayout_fragment_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tablayout_fragment_home"></ImageView>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout_fragment_home"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_option"
+            app:layout_constraintStart_toEndOf="@+id/imageView_search"
+            app:layout_constraintTop_toBottomOf="@+id/viewStatusBar"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="200dp"
+            app:tabMinWidth="20dp"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="9dp"
+            app:tabPaddingStart="9dp">
+            <!--app:tabSelectedTextColor="@color/home_tab_chose">-->
+        </android.support.design.widget.TabLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.typartybuilding.view.NoSlideViewPager
+        android:id="@+id/viewpager_fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.typartybuilding.view.NoSlideViewPager>
+
+</LinearLayout>

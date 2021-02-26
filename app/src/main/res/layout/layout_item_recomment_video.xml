@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/recomment_video_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:text="1"
+        android:textColor="#ff333333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/recomment_video_img"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/recomment_video_title" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/recomment_video_time_stv"
+        android:layout_width="34dp"
+        android:layout_height="18dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/recomment_video_img"
+        app:layout_constraintRight_toRightOf="@+id/recomment_video_img"
+        app:sCenterTextColor="@color/white"
+        app:sCenterTextSize="8sp"
+        app:sShapeCornersRadius="10dp"
+        app:sShapeSelectorNormalColor="#80000000"
+        app:sShapeSelectorPressedColor="#80000000"
+        app:sUseShape="true" />
+
+    <ImageView
+        android:id="@+id/recomment_video_img_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_play"
+        app:layout_constraintBottom_toBottomOf="@+id/recomment_video_img"
+        app:layout_constraintEnd_toEndOf="@+id/recomment_video_img"
+        app:layout_constraintStart_toStartOf="@+id/recomment_video_img"
+        app:layout_constraintTop_toTopOf="@+id/recomment_video_img" />
+
+
+    <TextView
+        android:id="@+id/recomment_video_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="新华社 2020.8.19"
+        android:textColor="#ff999999"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/recomment_video_img" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#EEEEEE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recomment_video_from" />
+</android.support.constraint.ConstraintLayout>

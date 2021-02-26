@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#00000000"
+        app:layout_constraintTop_toTopOf="parent"></View>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/home_frg_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/ic_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/home_frg_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/ic_mail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_fra_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBg"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/home_fra_banner_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/home_fra_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableLeft="@drawable/line_home_jingxuan"
+                    android:drawablePadding="10dp"
+                    android:includeFontPadding="false"
+                    android:text="精选头条"
+                    android:textColor="#ff333333"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/sourcehansanscn_heavy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.typartybuilding.view.WidgetActivityView
+                    android:id="@+id/home_banner"
+                    android:layout_width="0dp"
+                    android:layout_height="193dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/home_fra_title1">
+
+                </com.typartybuilding.view.WidgetActivityView>
+
+
+                <!-- <TextView
+                     android:id="@+id/home_banner_title"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:text="生命在于折腾"
+                     android:textColor="#ffffffff"
+                     android:textSize="18sp"
+                     android:layout_marginBottom="10dp"
+                     app:layout_constraintBottom_toBottomOf="@+id/home_banner"
+                     app:layout_constraintStart_toStartOf="@+id/home_banner"
+                     app:layout_constraintEnd_toEndOf="@+id/home_banner"
+                     />-->
+                <TextView
+                    android:id="@+id/learn_dynamic_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableBottom="@drawable/line_home_bottom_red_line"
+                    android:drawablePadding="4dp"
+                    android:text="组工动态"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/sourcehansanscn_heavy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/home_banner" />
+
+                <TextView
+                    android:id="@+id/learn_dynamic_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableRight="@mipmap/ic_more"
+                    android:drawablePadding="5dp"
+                    android:text="查看全部"
+                    android:textColor="#ff999999"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/learn_dynamic_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/learn_dynamic_tv" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_dynamic_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/learn_dynamic_tv" />
+
+
+                <TextView
+                    android:id="@+id/learn_recommend_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableBottom="@drawable/line_home_bottom_red_line"
+                    android:drawablePadding="4dp"
+                    android:text="每日推荐"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/sourcehansanscn_heavy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/home_dynamic_rv" />
+
+                <TextView
+                    android:id="@+id/learn_recommend_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:drawableRight="@mipmap/ic_more"
+                    android:drawablePadding="5dp"
+                    android:text="查看全部"
+                    android:textColor="#ff999999"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/learn_recommend_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/learn_recommend_tv" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_recommend_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/learn_recommend_tv" />
+
+                <!--app:indicator_drawable_unselected="@drawable/home_banner_ind_unselect"
+                    app:indicator_drawable_selected="@drawable/home_banner_ind_select"/>
+           -->
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

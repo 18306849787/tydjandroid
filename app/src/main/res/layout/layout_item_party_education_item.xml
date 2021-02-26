@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+
+
+        <TextView
+            android:id="@+id/party_education_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/line_home_jingxuan"
+            android:drawablePadding="10dp"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="20sp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/sourcehansanscn_heavy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/learn_new_idea_tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/ic_more"
+            android:drawablePadding="5dp"
+            android:text="查看全部"
+            android:textColor="#ff999999"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/party_education_item_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/party_education_item_title" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/party_education_item_recyc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/party_education_item_title" />
+
+</android.support.constraint.ConstraintLayout>

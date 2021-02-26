@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.typartybuilding">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--
+ <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    -->
+    <permission
+        android:name="getui.permission.GetuiService.${applicationId}"
+        android:protectionLevel="normal" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logo_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/logo_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:label,android:theme,android:allowBackup">
+
+        <activity
+            android:name=".activity.LaunchActivity"
+            android:theme="@style/FullScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.second.mine.MycollectAct"
+            android:theme="@style/ColorTranslucentTheme"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".activity.second.mine.MyFootprintAct"
+            android:theme="@style/ColorTranslucentTheme"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+
+        <activity android:name=".activity.second.interactive.MyReadAct"
+            android:theme="@style/ColorTranslucentTheme"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+
+        <activity android:name=".activity.second.interactive.LiveRoomAct"
+            android:theme="@style/ColorTranslucentTheme"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+
+        <activity android:name=".activity.second.PlayVideoAct"
+            android:theme="@style/ColorTranslucentTheme"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".activity.second.VideoMoreAct"
+            android:theme="@style/ColorTranslucentTheme"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".activity.second.homepager.SysMessageAct"
+            android:theme="@style/ColorTranslucentTheme"
+            android:screenOrientation="portrait"
+           />
+
+        <activity android:name=".activity.second.TextDetailAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"
+           />
+
+        <activity android:name=".activity.second.homepager.DynamicAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"
+            />
+        <activity android:name=".activity.second.homepager.RecommentAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"
+            />
+        <activity android:name=".activity.HomeAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"
+            android:launchMode="singleTask">
+
+        </activity>
+        <activity android:name=".activity.second.lean.XrxyAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"
+            />
+        <activity android:name=".activity.second.lean.PoliciesAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"/>
+        <activity android:name=".activity.second.lean.PartyEducationAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"/>
+        <activity android:name=".activity.second.lean.PartyListenerAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"/>
+        <!-- 全名朗读 -->
+        <service android:name=".activity.quanminlangdu.utils.MyMediaService" android:exported="false"></service>
+        <activity
+            android:name=".activity.quanminlangdu.mac.ReadInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.quanminlangdu.mac.BookListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".activity.quanminlangdu.mac.EditRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name=".activity.quanminlangdu.mac.MusicListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name=".activity.quanminlangdu.mac.ReadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ColorTranslucentTheme" />
+
+        <receiver
+            android:name=".reciver.NetworkStateReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver> <!-- tools:replace="android:icon, android:theme"> -->
+        <!-- tools:replace="android:allowBackup" -->
+        <activity
+            android:name=".activity.PlayComplexVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- tools:replace="android:appComponentFactory" -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.cameraalbum.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".activity.loginRelatedActivity.IntoFaceActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.loginRelatedActivity.FaceSwipingActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.loginRelatedActivity.FaceSwipingActivity3"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+
+        <service
+            android:name=".recording.RecordingService"
+            android:enabled="true"
+            android:exported="true" /> <!-- 我的 页面 相关跳转的activity -->
+        <activity
+            android:name=".activity.myRelatedActivity.UserAgreementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.SmartAnswerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.SmartAnswerActivityNew"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.AnswerBreakthroughActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.SystemSettingsActivity"
+            android:theme="@style/NoActionBarTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.myRelatedActivity.MyMicVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.IntegrationRuleActivity"
+            android:theme="@style/NoActionBarTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.myRelatedActivity.MyFootprintActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.MyAttentionActivity"
+            android:theme="@style/NoActionBarTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.myRelatedActivity.MyCollectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.EditProfileActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.PartyCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".activity.myRelatedActivity.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.myRelatedActivity.WishClaimActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 底部导航条， 有关 加号图标 点击后 跳转的相关activity -->
+        <activity
+            android:name=".activity.plusRelatedActivity.RecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.plusRelatedActivity.UploadPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.plusRelatedActivity.Camera2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.plusRelatedActivity.CameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.plusRelatedActivity.PublishMicVisionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 精选页面 -->
+        <activity
+            android:name=".activity.choiceness.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="stateVisible" /> <!-- 党建热搜 页面 -->
+        <activity
+            android:name=".activity.PbHotBotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.choiceness.HotVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.UserDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.choiceness.CurrentNewsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.NewsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.NewsDetailMixActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.dreamwish.DreamWishDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.dreamwish.DreamWishDetailTaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.PlayVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 播放混合 数据里的普通视频 -->
+        <activity
+            android:name=".activity.PlayVideoDetailMixActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.PlayLiveVideoDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".douyin.MicroVideoPlayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"/>
+
+        <activity
+            android:name=".activity.PlayMicroVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.PlayMicroVideoMixActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.PlayAudioActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.PlayAudioActivityNew"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.PlayAudioMixActivityNew"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.PlayPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.PlayPictureMixActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.HomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="stateHidden" /> <!-- 学习时刻 -->
+        <activity
+            android:name=".activity.learntime.EduFilmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 党建微视 -->
+        <activity
+            android:name=".activity.pbvideo.FindFascinatingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.pbvideo.PopularityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.pbvideo.HotBotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 圆梦心愿 -->
+        <activity
+            android:name=".activity.dreamwish.GoodPeopleDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.dreamwish.GoodPeopleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 党建书屋 -->
+        <activity
+            android:name=".activity.pblibrary.PblActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.pblibrary.TrackListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 党建地图 -->
+        <activity
+            android:name=".activity.pbmap.EducationalBaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.pbmap.ServiceCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.pbmap.PartyOrganizationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 基层党建 -->
+        <activity
+            android:name=".activity.basicparty.BasicPartyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 太原组工 -->
+        <activity
+            android:name=".activity.tyorganization.TyOrganizationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" /> <!-- 登陆相关activity -->
+        <activity
+            android:name=".activity.loginRelatedActivity.SetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".activity.loginRelatedActivity.IntoFaceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.loginRelatedActivity.PartyChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.loginRelatedActivity.PartyCertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".activity.loginRelatedActivity.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".activity.loginRelatedActivity.FaceSwipingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".activity.loginRelatedActivity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".activity.loginRelatedActivity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="stateVisible"
+            android:launchMode="singleTask"/>
+
+
+        <!-- 个推 的推送服务 -->
+        <service
+            android:name=".service.GtIntentService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".service.GtPushService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+
+        <!-- 喜马拉雅 播放器 -->
+        <service
+            android:name="com.ximalaya.ting.android.opensdk.player.service.XmPlayerService"
+            android:process=":player" /> <!-- 喜马拉雅 播放器 广播接收器 -->
+        <!--
+  <receiver
+            android:name=".reciver.MyPlayerReceiver"
+            android:exported="true"
+            android:process=":player">
+            <intent-filter>
+                <action android:name="com.app.test.android.Action_Close" />
+                <action android:name="com.app.test.android.Action_PAUSE_START" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- 高德地图 相关配置 -->
+
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="8816980b56b61c46e24396d4e370a75f" /> <!-- android:value="f6e4cf957781f91c6a801c3db2278e65" /> -->
+        <service android:name="com.amap.api.location.APSService" /> <!-- 高德新账号key  8816980b56b61c46e24396d4e370a75f -->
+        <!-- 喜马拉雅 -->
+        <meta-data
+            android:name="app_key"
+            android:value="3c2189a8b83ae602fe4bbc04acf55db3" />
+        <meta-data
+            android:name="pack_id"
+            android:value="com.typartybuilding" /> <!-- 极光分享 -->
+        <activity
+            android:name="cn.jiguang.share.android.ui.JiguangShellActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- Optional QQ分享回调 -->
+            <!-- scheme为“tencent”前缀再加上QQ开发者应用的appID；例如appID为123456，则scheme＝“tencent123456” -->
+            <intent-filter>
+                <data android:scheme="tencent101577395" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- Optional 新浪微博分享回调 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- Optional 新浪微博私信回调 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="sinaweibo"
+                    android:scheme="jsharesdk" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" /> <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="f372131ae2892297261f08f1" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true"/>
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+    </application>
+
+</manifest>

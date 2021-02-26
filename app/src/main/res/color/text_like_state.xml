@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--精选页面 点赞按钮  选中和未被选中的颜色-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="@color/text_like_chose"/>
+    <item android:state_selected="false" android:color="@color/text_like_not_chose"/>
+</selector>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    >
+
+    <ImageView
+        android:id="@+id/item_good_voice_img"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_load_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.allen.library.SuperTextView
+        android:id="@+id/item_good_voice_time"
+        android:layout_width="34dp"
+        android:layout_height="18dp"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/item_good_voice_img"
+        app:layout_constraintRight_toRightOf="@+id/item_good_voice_img"
+        app:sCenterTextColor="@color/white"
+        app:sCenterTextSize="8sp"
+        app:sShapeCornersRadius="10dp"
+        app:sShapeSelectorNormalColor="#80000000"
+        app:sShapeSelectorPressedColor="#80000000"
+        app:sUseShape="true" />
+    <TextView
+        android:id="@+id/item_good_voice_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:text="深山筑梦人"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/item_good_voice_img"/>
+</android.support.constraint.ConstraintLayout>

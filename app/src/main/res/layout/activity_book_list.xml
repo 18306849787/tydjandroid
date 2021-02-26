@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.quanminlangdu.mac.BookListActivity">
+    <View
+        android:id="@+id/mView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#FD3D3E"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_marginStart="3dp"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="朗读厅"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        style="@style/TabLayoutTabPadding"
+        android:background="@color/schm_book_whrite"
+        app:tabTextColor="@color/schm_book_writer"
+        app:tabSelectedTextColor="@color/schm_text_select"
+        app:tabIndicatorHeight="2dp"
+        app:tabIndicatorColor="@color/schm_text_select"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="@android:color/transparent"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

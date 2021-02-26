@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/recommend_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="#ff333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="组工动态 " />
+
+    <com.typartybuilding.view.RoundImageViewNew
+        android:id="@+id/recommend_item_img"
+        android:layout_width="115dp"
+        android:layout_height="86dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintCircleRadius="18dp"
+        android:src="@mipmap/ic_load_img"
+        app:border_radius="8dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/recommend_item_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/recommend_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="山西组工 2020.8.19"
+        android:textColor="#ff999999"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/recommend_item_img" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="13dp"
+        android:background="#eeeeee"
+        app:layout_constraintTop_toBottomOf="@+id/recommend_item_time" />
+</android.support.constraint.ConstraintLayout>

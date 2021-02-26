@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common_white_frame"
+    android:layout_marginTop="16dp"
+    android:paddingBottom="8dp">
+
+    <com.typartybuilding.view.RoundTopImageView
+        android:id="@+id/live_room_img"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_load_img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:left_top_radius="10dp"
+        app:right_top_radius="10dp" />
+
+
+
+    <TextView
+        android:id="@+id/live_room_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:textColor="#ffffffff"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/live_room_img"
+        />
+
+    <TextView
+        android:id="@+id/live_room_person_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:textColor="#ffffffff"
+        android:textSize="8sp"
+        android:visibility="gone"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@mipmap/icon_rs"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/live_room_img"
+        />
+
+    <TextView
+        android:id="@+id/live_room_hot_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:drawableLeft="@mipmap/icon_rqz"
+        android:text="874w"
+        android:drawablePadding="5dp"
+        android:textColor="#ffffffff"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/live_room_img"
+        app:layout_constraintEnd_toEndOf="@+id/live_room_img" />
+
+    <TextView
+        android:id="@+id/live_room_content"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_margin="8dp"
+        android:text="习大大的直播"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@+id/live_room_img" />
+</android.support.constraint.ConstraintLayout>

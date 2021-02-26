@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff333333</color>          <!--#008577-->
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--启动页 视频  跳过 的字体颜色-->
+    <color name="color_skip">#ffffffff</color>
+
+    <!--全名朗读-->
+    <color name="read_ac_bg">#fbfcf8</color>
+    <color name="schm_book_title_color">#ff333333</color>
+    <color name="schm_book_writer">#ffaaaaaa</color>
+    <color name="schm_book_user">#ffaaaaaa</color>
+    <color name="schm_text_select">#FD3D3E</color>
+    <color name="schm_book_whrite">#ffffffff</color>
+    <color name="schm_shibo_blank">#ff000000</color>
+    <color name="schm_shibo_gray">#ffcccccc</color>
+
+    <color name="waveform_selected">#33b5e5</color>
+    <color name="waveform_unselected">#195a72</color>
+    <color name="waveform_unselected_bkgnd_overlay">#0a242d</color>
+    <color name="selection_border">#ffffff</color>
+    <color name="playback_indicator">#ffff66</color>
+    <color name="grid_line">#66ffffff</color>
+    <color name="timecode">#ddffffdd</color>
+    <color name="timecode_shadow">#aa000000</color>
+    <color name="type_bkgnd_alarm">#88880000</color>
+    <color name="type_bkgnd_ringtone">#88008888</color>
+    <color name="type_bkgnd_notification">#88666600</color>
+    <color name="type_bkgnd_music">#88000000</color>
+    <color name="type_bkgnd_unsupported">#88cccccc</color>
+    <color name="alpha60_black">#99000000</color>
+
+
+
+
+
+
+
+
+
+    <color name="color_et_underline">#ffcccccc</color>   <!--edittext下划线的颜色-->
+    <color name="color_et_cursor">#ff138de8</color>   <!--edittext光标的颜色-->
+    <color name="color_view_divider">#f3f3f3</color>   <!--View 使用分割线 颜色-->
+    <color name="color_black">#000000 </color>
+    <color name="colorPhotoView">#333333</color>
+    <color name="colorDivider">#f3f3f3</color>
+    <color name="colorDividerDreamWish">#f3f3f3</color>
+    <color name="colorBg">#f3f3f3</color>            <!--View使用分割线 颜色-->
+
+    <color name="red_del">#E9403B</color>      <!--侧滑按钮 背景颜色-->
+
+    <!--状态栏 和 标题栏 的 颜色-->
+    <color name="title">#fffd3d3e</color>
+    <color name="red_title">#fffd3d3e</color>
+    <color name="white_title">#FFFFFF</color>
+
+    <!--LoginActivity 页面-->
+    <color name="white_bg">#FFFFFF</color>         <!--登录页面的背景颜色-->
+    <color name="red_tablayout">#E9403B</color>   <!--TabLayout的 下划线的颜色-->
+    <color name="tab_black">#ff333333</color>      <!--TabLayout的tab 选中和没选中的颜色-->
+    <color name="tab_gray">#ffaaaaaa</color>
+
+    <!--HomeActivity 页面-->
+    <color name="white_search">#ffffffff</color>    <!--标题栏 搜索框的背景-->
+    <color name="white_bottom">#ffffffff</color>    <!--HomeActivity 底部导航栏背景-->
+    <color name="text_chose">#d54208</color>      <!--底部导航栏 主页被选中的颜色#fff04c1b-->
+    <color name="text_not_chose">#666666</color>  <!--底部导航栏 主页未被选中的颜色#ff333333-->
+
+    <color name="home_tab_chose">#fffd3d3e</color>    <!--首页 TabLayout的 tab 被选中的颜色-->
+    <color name="home_tab_not_chose">#ff333333</color>  <!--首页 TabLayout的 tab 未被选中的颜色-->
+    <color name="tablayout_bg_fghome">#ffffffff</color>  <!--首页 TabLayout 的 背景颜色-->
+
+    <!--HomeActivity 我的 页面-->
+    <color name="my_bg">#ffffffff</color>
+
+    <!--主页 的  精选页面-->
+    <color name="parting_line_cho">#F7F7F7</color>     <!--精选页面 分割线的颜色-->
+    <color name="hot_video_bg">#ffffffff</color>        <!--精选页面 热门视频背景颜色-->
+    <color name="text_like_chose">#fffe583f</color>     <!--精选页面 点赞 被选中的颜色-->
+    <color name="text_like_not_chose">#ffcccccc</color>  <!--精选页面 点赞 未被选中的颜色-->
+
+    <color name="dot_not_chose">#ffaaaaaa</color>      <!--精选页面 viewpager图片滑动 的圆点颜色-->
+    <color name="dot_chose">#ffec3838</color>       <!--精选页面 viewpager图片滑动 被选中的圆点颜色-->
+
+    <!--主页  学习时刻-->
+    <color name="learn_time_bg">#ffffffff</color>   <!--学习时刻 背景颜色-->
+    <color name="learn_time_selector_1">#ffffffff</color>    <!--导航被选中的颜色-->
+    <color name="learn_time_selector_0">#ffaaaaaa</color>     <!--未选中颜色-->
+    <!--主页  党建微视-->
+    <color name="part_building_video_bg">#ffffffff</color>  <!--党建微视 背景颜色-->
+    <color name="hot_bot_num_1">#fffd3d3e</color>        <!--党建热搜 排行前三的数字 颜色-->
+    <color name="hot_bot_num_0">#ffaaaaaa</color>        <!--党建热搜 排行大于前三的数字 颜色-->
+
+    <!--主页  党建书屋-->
+    <color name="part_building_library_bg">#ffffffff</color>  <!--党建图书馆 背景颜色-->
+    <!--TrackListActivity-->
+    <color name="pbl_audio_play_list_ac_bg"> #597580</color>
+
+    <!--主页  圆梦心愿-->
+    <color name="dream_wish_bg">#ffffffff</color>              <!--圆梦心愿 背景颜色-->
+    <color name="dream_wish_donate">#fffd3d3e</color>          <!--助力捐赠 字体颜色-->
+    <color name="dream_wish_collected">#ffffffff</color>       <!--已集齐 字体颜色-->
+    <!--主页  太原组工-->
+    <color name="ty_organization_bg">#ffffffff</color>         <!--太原组工 背景颜色-->
+    <!--主页  基层党建-->
+    <color name="basic_pb_bg">#ffffffff</color>               <!--基层党建 背景颜色-->
+    <!--主页  党建地图-->
+    <color name="pb_map_bg">#ffffffff</color>               <!--党建地图 背景颜色-->
+    <color name="pb_map_chose">#ffffffff</color>            <!--选中的字体颜色-->
+    <color name="pb_map_not_chose">#ffaaaaaa</color>            <!--未被选中的字体颜色-->
+
+    <!--UploadPictureActivity-->
+    <color name="upload_pic_ac_bg">#ff212832</color>               <!--上传图片页面 背景颜色-->
+
+    <!--RecordActivity-->
+    <color name="record_ac_bg">#ffffffff</color>
+    <color name="record_ac_play0">#ffcccccc</color>         <!--不可播放的颜色-->
+    <color name="record_ac_play1">#ff514f4f</color>         <!--可播放的颜色-->
+
+    <!--UserDetailsActivity-->
+    <color name="user_details_ac_bg">#ffffffff</color>       <!--背景颜色-->
+
+    <!--HotVideoActivity-->
+    <color name="hot_video_ac_bg">#ffffffff</color>       <!--背景颜色-->
+
+    <!--PlayVideoDetailActivity-->
+    <color name="play_video_detail_ac_bg">#ffffffff</color>       <!--背景颜色-->
+
+    <!--PbHotBotActivity -->
+    <color name="pb_hot_bot_ac_bg">#ffffffff</color>       <!--背景颜色-->
+
+
+
+    <color name="c_333333">#333333</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_EA0400">#EA0400</color>
+    <color name="c_EEEEEE">#EEEEEE</color>
+    <color name="c_F7F7F7">#F7F7F7</color>
+    <color name="background_color">#F7F7F7</color>
+</resources>

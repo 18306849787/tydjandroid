@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff597580">
+
+    <ImageButton
+        android:id="@+id/imageButton_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/djsw_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="72dp"
+        android:gravity="center_horizontal"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_bg"
+        android:layout_width="225dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="245dp"
+        android:src="@mipmap/img_djsw_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_headline" />
+
+    <com.typartybuilding.view.RoundImageView
+        android:id="@+id/imageView_track_pic"
+        android:layout_width="255dp"
+        android:layout_height="255dp"
+        android:layout_marginBottom="19dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        style="@android:style/Widget.Holo.ProgressBar"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_track_pic"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_track_pic"
+        app:layout_constraintStart_toStartOf="@+id/imageView_track_pic"
+        app:layout_constraintTop_toTopOf="@+id/imageView_track_pic" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_bg">
+
+        <TextView
+            android:id="@+id/textView_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/textView_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:maxHeight="1dp"
+        android:minHeight="1dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/fg_pb_library_shape4"
+        android:thumb="@drawable/fg_pb_library_shape5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton_last"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="49dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@mipmap/djsw_btn_shangyiqu"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_play"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_play"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_play" />
+
+    <ImageButton
+        android:id="@+id/imageButton_play"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ac_track_list_selector1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageButton
+        android:id="@+id/imageButton_next"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="49dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@mipmap/djsw_btn_xiayiqu"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_play"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_play"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_play" />
+
+</android.support.constraint.ConstraintLayout>

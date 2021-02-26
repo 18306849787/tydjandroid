@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PlayPictureActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+    </android.support.v4.view.ViewPager>
+
+    <ImageButton
+        android:id="@+id/imagebutton_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="30dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        style="?android:attr/borderlessButtonStyle"
+        android:src="@mipmap/wspplay_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagebutton_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imagebutton_back" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_img_head"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="262dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_attention"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="33dp"
+        android:src="@drawable/ac_user_details_selector1"
+        app:layout_constraintEnd_toEndOf="@+id/circle_img_head"
+        app:layout_constraintStart_toStartOf="@+id/circle_img_head"
+        app:layout_constraintTop_toTopOf="@+id/circle_img_head" />
+
+    <TextView
+        android:id="@+id/textView_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:drawablePadding="7dp"
+        android:drawableTop="@drawable/ac_play_micro_video_selector1"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/circle_img_head"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="@+id/circle_img_head"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_attention" />
+
+    <ImageButton
+        android:id="@+id/imagebutton_share"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="23dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        style="?android:attr/borderlessButtonStyle"
+        android:src="@mipmap/weishi_btn_share"
+        app:layout_constraintEnd_toEndOf="@+id/circle_img_head"
+        app:layout_constraintStart_toStartOf="@+id/circle_img_head"
+        app:layout_constraintTop_toBottomOf="@+id/textView_like" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="16dp"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_abstract"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_abstract"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="20dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

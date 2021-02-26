@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/ac_smart_answer_shape2_1"/>
+    <item android:state_selected="false" android:drawable="@drawable/ac_smart_answer_shape2_1"/>
+
+    <!--@drawable/ac_smart_answer_shape1_1-->
+</selector>

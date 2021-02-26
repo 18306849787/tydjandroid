@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp">
+
+   <com.allen.library.CircleImageView
+       android:id="@+id/head_view"
+       android:layout_width="32dp"
+       android:layout_height="32dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       android:src="@mipmap/ic_load_img"/>
+
+    <TextView
+        android:id="@+id/weishi_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="风吹草动"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="@+id/head_view"
+        app:layout_constraintBottom_toBottomOf="@+id/head_view"
+        app:layout_constraintStart_toEndOf="@+id/head_view"
+        />
+
+    <TextView
+        android:id="@+id/weishi_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="3"
+        android:ellipsize="end"
+        android:textColor="#ff333333"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/head_view"
+        />
+
+    <com.typartybuilding.view.RoundImageViewNew
+        android:id="@+id/weishi_img"
+        android:layout_width="164dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:border_radius="6dp"
+        app:layout_constraintDimensionRatio="9:16"
+        android:src="@mipmap/ic_load_img"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weishi_title"/>
+
+    <TextView
+        android:id="@+id/weishi_zan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点赞数：99"
+        android:textColor="#ffffffff"
+        android:textSize="12sp"
+        android:layout_margin="8dp"
+        app:layout_constraintRight_toRightOf="@+id/weishi_img"
+        app:layout_constraintBottom_toBottomOf="@+id/weishi_img"
+        />
+
+    <TextView
+        android:id="@+id/weishi_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020.9.30"
+        android:textColor="#ff999999"
+        android:textSize="10sp"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weishi_img"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/weishi_date"/>
+</android.support.constraint.ConstraintLayout>

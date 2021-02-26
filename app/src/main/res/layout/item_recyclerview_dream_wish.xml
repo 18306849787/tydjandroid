@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/fg_pb_video_shape5">
+
+        <TextView
+            android:id="@+id/textView_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.1"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_subhead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.1"
+            android:text=""
+            android:textColor="#ffaaaaaa"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_headline" />
+
+        <com.typartybuilding.view.RoundImageViewNew
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="16:9"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:border_radius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_subhead" />
+
+        <com.typartybuilding.view.RoundImageViewNew
+            android:visibility="invisible"
+            android:id="@+id/imageView_love_collected"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img_juanzengjieshu"
+            app:layout_constraintDimensionRatio="16:9"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            app:border_radius="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textView_subhead" />
+
+
+        <ImageView
+            android:id="@+id/imageView_jz"
+            android:layout_width="93dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        <!--android:src="@drawable/fg_dreamwish_selector1"-->
+
+
+        <TextView
+            android:id="@+id/textView_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:text="当前已集齐"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView_love_collect_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text="0"
+            android:textColor="#FD3D3E"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_text1"
+            app:layout_constraintStart_toEndOf="@+id/textView_text1"
+            app:layout_constraintTop_toTopOf="@+id/textView_text1" />
+
+        <TextView
+            android:id="@+id/textView_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text="个爱心"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_text1"
+            app:layout_constraintStart_toEndOf="@+id/textView_love_collect_num"
+            app:layout_constraintTop_toTopOf="@+id/textView_text1" />
+
+       <!-- <FrameLayout
+            android:id="@+id/framelayout_progressbar"
+            android:layout_width="180dp"
+            android:layout_height="5dp"
+            android:background="@drawable/shape_dream_wish_progessbar_gray"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_love_collect_num">
+            <ImageView
+                android:id="@+id/imageView_progressbar_state"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:src="@drawable/shape_dream_wish_progessbar_red0"/>
+        </FrameLayout>-->
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="180dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:padding="0dp"
+            android:max="100"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:progress="10"
+            android:progressDrawable="@drawable/fg_dream_wishlayer1"
+            android:thumb="@null"
+            app:layout_constraintStart_toStartOf="@+id/textView_text1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_text1" />
+
+        <TextView
+            android:id="@+id/textView_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text=""
+            android:textColor="#ff666666"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+            app:layout_constraintStart_toEndOf="@+id/seekBar"
+            app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        ></View>
+</LinearLayout>

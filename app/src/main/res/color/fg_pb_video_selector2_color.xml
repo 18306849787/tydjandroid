@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--在HomeActivity 底部 “首页”和 “我的” 被选中和未被选中的颜色-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="@color/learn_time_selector_0"/>
+    <item android:state_selected="false" android:color="@color/learn_time_selector_1"/>
+</selector>

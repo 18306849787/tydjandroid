@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--无ActionBar 的主题-->
+    <style name="NoActionBarTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <declare-styleable name="WidgetView">
+        <attr name="show_dot" format="boolean"/>
+        <attr name="auto_play" format="boolean"/>
+        <attr name="dot_size" format="dimension"/>
+    </declare-styleable>
+    <!--全屏-->
+    <style name="FullScreen" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/launch_img</item>
+    </style>
+
+    <!--LoginActivity TabLayout的tab的字体和字体颜色-->
+    <style name="tabLayout_text_size">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffaaaaaa</item>
+    </style>
+
+    <!--党建微视 页面  Tablayout的tab的字体和字体颜色-->
+    <style name="tabLayout_pbv">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+
+    <!--党建书屋，播放弹窗动画效果-->
+    <style name="pbl_popwindow">
+        <item name="android:windowEnterAnimation">@anim/pbl_pop_show</item>
+        <item name="android:windowExitAnimation">@anim/pbl_pop_hidden</item>
+    </style>
+
+    <!--服务中心，查看图片弹窗动画效果-->
+    <style name="sc_ac_popwindow">
+        <item name="android:windowEnterAnimation">@anim/sc_ac_pop_show</item>
+        <item name="android:windowExitAnimation">@anim/sc_ac_pop_hidden</item>
+    </style>
+
+
+    <!--全名朗读-->
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">#00000000</item>
+    </style>
+
+    <style name="ColorTranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#00FFFFFF</item>
+    </style>
+
+    <style name="TabLayoutTabPadding" parent="Widget.Design.TabLayout">
+        <item name="tabPaddingEnd">50dp</item>
+        <item name="tabPaddingStart">50dp</item>
+    </style>
+
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

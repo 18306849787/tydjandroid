@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.HomeFragmentLearningTime">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:scrollbars="none"
+        android:background="@color/learn_time_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:paddingRight="15dp">
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="40dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/fg_learntime_selector1"
+                android:text="热播"
+                android:textColor="@color/fg_learntime_selector_color"
+                android:textSize="12sp"/>
+           <TextView
+               android:id="@+id/textView2"
+               android:layout_width="75dp"
+               android:layout_height="23dp"
+               android:layout_gravity="center_vertical"
+               android:gravity="center"
+               android:layout_marginLeft="15dp"
+               android:background="@drawable/fg_learntime_selector3"
+               android:text="学习新思想"
+               android:textColor="@color/fg_learntime_selector_color"
+               android:textSize="12sp"/>
+
+           <TextView
+               android:id="@+id/textView3"
+               android:layout_width="75dp"
+               android:layout_height="23dp"
+               android:layout_gravity="center_vertical"
+               android:gravity="center"
+               android:layout_marginLeft="15dp"
+               android:background="@drawable/fg_learntime_selector3"
+               android:text="党员教育片"
+               android:textColor="@color/fg_learntime_selector_color"
+               android:textSize="12sp"/>
+
+           <TextView
+               android:id="@+id/textView4"
+               android:layout_width="65dp"
+               android:layout_height="23dp"
+               android:layout_gravity="center_vertical"
+               android:gravity="center"
+               android:layout_marginLeft="15dp"
+               android:background="@drawable/fg_learntime_selector2"
+               android:text="时代先锋"
+               android:textColor="@color/fg_learntime_selector_color"
+               android:textSize="12sp"/>
+
+           <TextView
+               android:id="@+id/textView5"
+               android:layout_width="65dp"
+               android:layout_height="23dp"
+               android:layout_gravity="center_vertical"
+               android:gravity="center"
+               android:layout_marginLeft="15dp"
+               android:background="@drawable/fg_learntime_selector2"
+               android:text="远程教育"
+               android:textColor="@color/fg_learntime_selector_color"
+               android:textSize="12sp"/>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+</LinearLayout>

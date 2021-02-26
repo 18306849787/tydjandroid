@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.dreamwish.GoodPeopleActivity">
+
+    <com.typartybuilding.view.WhiteTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+    </com.typartybuilding.view.WhiteTitleLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout_curr_user"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@mipmap/bg_img_hrbranking">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@mipmap/icon_caisecircle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageView_head"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textView_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#fffffefe"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout"
+                    app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+                <TextView
+                    android:id="@+id/textView_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="99+"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@mipmap/icon_paihangbang"
+                    android:drawablePadding="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+                    app:layout_constraintStart_toStartOf="@+id/textView_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:drawableLeft="@mipmap/icon_xinxin"
+                    android:drawablePadding="10dp"
+                    android:text="完成心愿："
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_dream_num"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_dream_num"
+                    app:layout_constraintTop_toTopOf="@+id/textView_dream_num" />
+
+                <TextView
+                    android:id="@+id/textView_dream_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:text=""
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_ranking"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView_ranking" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textView_no_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="没有更多了"
+                android:textColor="#4d4d4d"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>
